@@ -1,0 +1,26 @@
+<div class="login_form">
+	<br>
+	<br>
+	<%= form_tag do %>
+	  <fieldset id="newSession_fieldset">
+	  	<legend id="newSession_legend"> Please Log In </legend>
+
+	      <div class="login_field">
+	     	 <%= label_tag :username, "Username:" %>
+	     	 <%= text_field_tag :username, params[:username] %>
+	  	  </div>
+
+	  	  <div class="login_field">
+	  	  	<%= label_tag :password, "Password:" %>
+	  	  	<%= password_field_tag :password, params[:password] %>
+	  	  </div>
+
+	  	  <div class="login_field">
+	  	  	<%= submit_tag "Log In", class: "login_btn" %>
+	  	  </div>
+	  </fieldset>
+	  <Br>
+	  <br>
+	  <div id ="error_message"><%= flash[:alert] if flash[:alert] %></div>
+	<% end %>  
+</div>
